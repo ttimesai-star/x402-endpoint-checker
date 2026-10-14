@@ -1,0 +1,26 @@
+{
+    "actorSpecification": 1,
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["url", "status", "httpStatus", "latencyMs", "minPriceUsd", "challenge", "bazaar", "error"],
+                "flatten": ["challenge", "bazaar"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": { "label": "Endpoint", "format": "link" },
+                    "status": { "label": "Status", "format": "text" },
+                    "httpStatus": { "label": "HTTP", "format": "number" },
+                    "latencyMs": { "label": "Latency, ms", "format": "number" },
+                    "minPriceUsd": { "label": "Price, USD", "format": "number" },
+                    "challenge.valid": { "label": "402 valid", "format": "boolean" },
+                    "challenge.x402Version": { "label": "x402 ver.", "format": "number" },
+                    "bazaar.listed": { "label": "In Bazaar", "format": "boolean" },
+                    "error": { "label": "Error", "format": "text" }
+                }
+            }
+        }
+    }
+}

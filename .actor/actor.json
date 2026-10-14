@@ -1,0 +1,20 @@
+{
+    "actorSpecification": 1,
+    "name": "x402-endpoint-checker",
+    "title": "x402 Endpoint Checker",
+    "description": "Check x402 (HTTP 402 payment) API endpoints without paying: is it up, is the 402 challenge valid, which network, asset, payTo and price it asks, and does it match its x402 Bazaar listing.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "js-empty"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "minMemoryMbytes": 128,
+    "maxMemoryMbytes": 1024,
+    "defaultMemoryMbytes": 256
+}

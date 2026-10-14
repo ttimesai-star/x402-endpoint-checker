@@ -1,0 +1,192 @@
+[
+  {
+    "url": "https://x402.tbs-digital.com/company/resolve",
+    "checkedAt": "2026-10-14T16:27:01.255Z",
+    "paymentSent": false,
+    "method": "GET",
+    "requestUrl": "https://x402.tbs-digital.com/company/resolve?country=fr&name=TotalEnergies",
+    "latencyMs": 574,
+    "httpStatus": 402,
+    "https": true,
+    "contentType": "application/json; charset=utf-8",
+    "challenge": {
+      "source": "header",
+      "x402Version": 2,
+      "valid": true,
+      "issues": [],
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "networkName": "Base",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "assetSymbol": "USDC",
+          "amount": "2000",
+          "priceUsd": 0.002,
+          "payTo": "0xd6fCE15298Fc9D60f867d9455D497177Da9BFB0a",
+          "maxTimeoutSeconds": 300,
+          "testnet": false,
+          "ok": true
+        }
+      ]
+    },
+    "minPriceUsd": 0.002,
+    "reachable": true,
+    "status": "valid_x402",
+    "bazaar": {
+      "checked": true,
+      "listed": true,
+      "resource": "https://x402.tbs-digital.com/company/resolve",
+      "serviceName": "TBS Company SIREN/VAT/LEI API",
+      "description": "Entity resolution for KYC/KYB, supplier and customer onboarding and France 2026 e-invoicing: use when you hold a company name, brand or director and need a certain identifier. Returns the French SIREN, EU VAT or global LEI with a confidence score and ranked candidates, cross-checked across official ",
+      "listedMethod": "GET",
+      "listedExampleInput": {
+        "country": "fr",
+        "name": "TotalEnergies"
+      },
+      "listedAccepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "amount": "2000",
+          "payTo": "0xd6fCE15298Fc9D60f867d9455D497177Da9BFB0a"
+        }
+      ],
+      "lastUpdated": "2026-10-11T08:22:25.773Z",
+      "match": {
+        "payToMatch": true,
+        "priceMatch": true
+      }
+    }
+  },
+  {
+    "url": "https://keyring-agent.blockchhub.link/api/swap-token",
+    "checkedAt": "2026-10-14T16:27:01.354Z",
+    "paymentSent": false,
+    "method": "GET",
+    "latencyMs": 959,
+    "httpStatus": 402,
+    "https": true,
+    "contentType": "application/json",
+    "challenge": {
+      "source": "header",
+      "x402Version": 2,
+      "valid": false,
+      "issues": [
+        "accepts[0].amount \"0\" is not a positive integer"
+      ],
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "networkName": "Base",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "assetSymbol": "USDC",
+          "amount": "0",
+          "priceUsd": 0,
+          "payTo": "0x17cd53C04D707eF0Dd615EF56c633f02915a7905",
+          "maxTimeoutSeconds": 3600,
+          "testnet": false,
+          "ok": false
+        }
+      ]
+    },
+    "minPriceUsd": 0,
+    "reachable": true,
+    "status": "invalid_x402_challenge",
+    "bazaar": {
+      "checked": true,
+      "listed": true,
+      "resource": "https://keyring-agent.blockchhub.link/api/swap-token",
+      "serviceName": null,
+      "description": "Pay the swap-token execution fee (token-for-token swap)",
+      "listedMethod": "GET",
+      "listedExampleInput": {},
+      "listedAccepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "amount": "1000",
+          "payTo": "0x17cd53C04D707eF0Dd615EF56c633f02915a7905"
+        }
+      ],
+      "lastUpdated": "2026-09-16T02:08:01.839Z",
+      "match": {
+        "payToMatch": true,
+        "priceMatch": false
+      }
+    }
+  },
+  {
+    "url": "https://ari001.tailb4ac3a.ts.net/v1/ventures/x402_chain_reads_v1/base_erc721_ownerof",
+    "checkedAt": "2026-10-14T16:27:01.358Z",
+    "paymentSent": false,
+    "method": "GET",
+    "requestUrl": "https://ari001.tailb4ac3a.ts.net/v1/ventures/x402_chain_reads_v1/base_erc721_ownerof?id=5256424&token=0xa990c6a764b73bf43cee5bb40339c3322fb9d55f",
+    "latencyMs": 1347,
+    "error": "ETIMEDOUT: ",
+    "reachable": false,
+    "status": "unreachable",
+    "bazaar": {
+      "checked": true,
+      "listed": true,
+      "resource": "https://ari001.tailb4ac3a.ts.net/v1/ventures/x402_chain_reads_v1/base_erc721_ownerof",
+      "serviceName": "Base ERC-721 Owner",
+      "description": "NFT owner read on Base: takes token (ERC-721 contract, 0x + 40 hex) and id (decimal token id) and returns the address that ownerOf(id) reports on the contract. Base ERC-721 read of token + token id.",
+      "listedMethod": "GET",
+      "listedExampleInput": {
+        "id": "5256424",
+        "token": "0xa990c6a764b73bf43cee5bb40339c3322fb9d55f"
+      },
+      "listedAccepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "amount": "3000",
+          "payTo": "0xBF324F1F5b648a67905A86aF3E1093C667EAa035"
+        }
+      ],
+      "lastUpdated": "2026-10-14T14:09:52.506Z"
+    }
+  },
+  {
+    "url": "https://stormstation247.com/api/station",
+    "checkedAt": "2026-10-14T16:27:01.356Z",
+    "paymentSent": false,
+    "method": "GET",
+    "requestUrl": "https://stormstation247.com/api/station?family=asos&id=0F2&state=tx",
+    "latencyMs": 2987,
+    "httpStatus": 200,
+    "https": true,
+    "contentType": "application/json",
+    "bodyPreview": "{\"station\":1,\"tier\":\"free\",\"id\":\"0F2\",\"name\":\"Bowie\",\"network\":\"TX_ASOS\",\"family\":\"asos\",\"state\":\"tx\",\"at\":{\"lat\":33.6017,\"lon\":-97.7756,\"elevationFt\":1101,\"county\":\"Montague\"},\"rank\":null,\"now\":{\"tem",
+    "reachable": true,
+    "status": "no_payment_required",
+    "bazaar": {
+      "checked": true,
+      "listed": true,
+      "resource": "https://stormstation247.com/api/station",
+      "serviceName": "Storm Station 247",
+      "description": "Everything one weather instrument is reporting now: each figure with its unit, the raw observation, where it stands, its 247 rank and its station report. This call needs state, family and id, the three parts of an instrument page address; the example below answers for real. Every address this endpoi",
+      "listedMethod": "GET",
+      "listedExampleInput": {
+        "family": "asos",
+        "id": "0F2",
+        "state": "tx"
+      },
+      "listedAccepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "amount": "10000",
+          "payTo": "0x44adc7d3199486730d6346f2dc2424de97124700"
+        }
+      ],
+      "lastUpdated": "2026-10-14T16:25:28.28Z"
+    }
+  }
+]

@@ -1,0 +1,53 @@
+{
+    "title": "x402 Endpoint Checker input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Endpoint URLs",
+            "type": "array",
+            "description": "Full URLs of x402 endpoints to check (one per line). Each URL is requested once without any payment header.",
+            "editor": "stringList",
+            "prefill": [
+                "https://x402.tbs-digital.com/company/resolve"
+            ]
+        },
+        "method": {
+            "title": "HTTP method",
+            "type": "string",
+            "description": "AUTO uses the method and example input published in the x402 Bazaar listing of the endpoint (falls back to GET). Choose a fixed method to override.",
+            "editor": "select",
+            "enum": ["AUTO", "GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"],
+            "default": "AUTO"
+        },
+        "requestBody": {
+            "title": "JSON body (POST/PUT/PATCH)",
+            "type": "object",
+            "description": "Optional JSON body sent with POST/PUT/PATCH requests. Leave empty to use the Bazaar example input (AUTO) or {}.",
+            "editor": "json"
+        },
+        "checkBazaar": {
+            "title": "Cross-check with x402 Bazaar",
+            "type": "boolean",
+            "description": "Look each URL up in the public x402 Bazaar catalogue (Coinbase CDP discovery API) and compare the live payTo and price with the listing.",
+            "default": true
+        },
+        "timeoutSecs": {
+            "title": "Timeout per request (seconds)",
+            "type": "integer",
+            "description": "How long to wait for each endpoint before reporting it unreachable.",
+            "default": 20,
+            "minimum": 3,
+            "maximum": 120
+        },
+        "maxConcurrency": {
+            "title": "Max parallel requests",
+            "type": "integer",
+            "description": "Total parallel requests. Requests to one host are always limited to two at a time.",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50
+        }
+    },
+    "required": ["urls"]
+}

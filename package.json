@@ -1,0 +1,19 @@
+{
+  "name": "x402-endpoint-checker",
+  "version": "0.1.0",
+  "description": "Apify Actor: unpaid health and conformance check of x402 (HTTP 402) payment endpoints, with a cross-check against the public x402 Bazaar catalogue. Never pays.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Artur Baranovsky",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "apify": "^3.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
