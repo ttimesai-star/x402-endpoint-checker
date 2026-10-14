@@ -117,7 +117,7 @@ The full sample is in [`examples/output_sample.json`](https://github.com/ttimesa
 
 ## Pricing
 
-Pay per event: **$0.003 per endpoint checked**, so 100 endpoints cost $0.30, plus Apify's standard small charge for starting a run. Invalid input lines are not charged. If you set a maximum cost per run, the Actor stops cleanly when it is reached and does not check the remaining URLs.
+Right now the Actor has no fee of its own: you pay only Apify platform usage. In our test run on Apify, checking 7 endpoints used $0.00015 of platform usage. Invalid input lines are skipped.
 
 ## How it works
 

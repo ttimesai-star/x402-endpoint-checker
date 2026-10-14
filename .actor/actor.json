@@ -16,5 +16,6 @@
     "readme": "../README.md",
     "minMemoryMbytes": 128,
     "maxMemoryMbytes": 1024,
-    "defaultMemoryMbytes": 256
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
 }

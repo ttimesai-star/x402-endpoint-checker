@@ -1,0 +1,13 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "x402 Endpoint Checker output",
+    "description": "One dataset item per checked URL: status, HTTP result, parsed and validated x402 payment challenge, price in USD, and the x402 Bazaar cross-check.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Results",
+            "description": "All checked endpoints, overview table view.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        }
+    }
+}
